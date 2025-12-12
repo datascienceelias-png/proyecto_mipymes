@@ -1,0 +1,4 @@
+.venv/
+Mipymes/
+.mypy_cache/
+Evidencias/
