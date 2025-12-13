@@ -1,6 +1,6 @@
 {
   
-  "Muslo de pollo": {
+  "muslo de pollo": {
     "proteina": 20,
     "calorias": 144,
     "carbohidratos": 0,
@@ -12,61 +12,61 @@
     "carbohidratos": 0,
     "grasas": 3
   },
-  "Huevo": {
+  "huevo": {
     "proteina": 6,
     "calorias": 72,
     "carbohidratos": 0,
     "grasas": 5
   },
-  "Molleja de pollo": {
+  "molleja de pollo": {
     "proteina": 18,
     "calorias": 94,
     "carbohidratos": 0,
     "grasas": 2
   },
-  "Lomo de cerdo": {
+  "lomo de cerdo": {
     "proteina": 22,
     "calorias": 132,
     "carbohidratos": 0,
     "grasas": 4
   },
-  "Atún": {
+  "atún": {
     "proteina": 17.5,
     "calorias": 195,
     "carbohidratos": 0,
     "grasas": 13.89
   },
-  "Pierna de cerdo": {
+  "pierna de cerdo": {
     "proteina": 23,
     "calorias": 232,
     "carbohidratos": 0,
     "grasas": 15
   },
-  "Solmillo de cerdo": {
+  "solmillo de cerdo": {
     "proteina": 21,
     "calorias": 109,
     "carbohidratos": 0,
     "grasas": 2
   },
-  "Garbanzos": {
+  "garbanzos": {
     "proteina": 22,
     "calorias": 364,
     "carbohidratos": 61,
     "grasas": 4.8
   },
-  "Frijoles negros": {
+  "frijoles negros": {
     "proteina": 22,
     "calorias": 341,
     "carbohidratos": 59,
     "grasas": 1
   },
-  "Frijoles colorados": {
+  "frijoles colorados": {
     "proteina": 22.5,
     "calorias": 333,
     "carbohidratos": 61,
     "grasas": 1
   },
-  "Leche de vaca": {
+  "leche de vaca": {
     "proteina": 3,
     "calorias": 63,
     "carbohidratos": 5,
