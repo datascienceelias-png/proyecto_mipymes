@@ -30,16 +30,21 @@ def barra_costo_promedio_nutr(productos,precios_carb, precios_gras, precios_prot
     
     plt.figure(figsize=(30, 6))
 
+    carb_valores = [precios_carb[p] for p in productos]
+    gras_valores = [precios_gras[p] for p in productos]
+    prot_valores = [precios_prot[p] for p in productos]
+
     #Se crean 3 barras unidas para cada grupo de alimentos
-    plt.bar(x_proteina, precios_prot.values(), width=grosor_barras, color = "#CC243C", label = "Proteina" )
-    plt.bar(x_carbohidrato, precios_carb.values(), width=grosor_barras, color='#1F74B1', label='Carbohidratos')
-    plt.bar(x_grasa, precios_gras.values(), width=grosor_barras, color = "#F38D30", label = "Grasa")
+    plt.bar(x_proteina, prot_valores, width=grosor_barras, color = "#CC243C", label = "Proteina" )
+    plt.bar(x_carbohidrato, carb_valores, width=grosor_barras, color='#1F74B1', label='Carbohidratos')
+    plt.bar(x_grasa, gras_valores, width=grosor_barras, color = "#F38D30", label = "Grasa")
 
     #Etiquetas:
     plt.ylabel("Precio promedio(g/$)", fontweight='bold', fontsize=16)
     plt.xlabel("Productos", fontweight='bold', fontsize=16)
     plt.xticks(espacio_barra, productos, rotation=25, ha='right') #Posición de las etiquetas en el eje x
     plt.title("Costo promedio de macronutrientes por producto", fontweight='bold', fontsize=16)
+    plt.yscale('log') #Escala logarítmica para mejor visualización porque hay mucha diferencia entre los costos de las grasas y los de los carbohidratos/proteínas
 
     plt.legend()
 
@@ -50,7 +55,7 @@ precios_gras = {'muslo de pollo': 12.85, 'pechuga de pollo': 103.62, 'huevo': 5.
 precios_carb = {'muslo de pollo': 0, 'pechuga de pollo': 0, 'huevo': 0, 'molleja de pollo': 0, 'lomo de cerdo': 0, 'atún': 0, 'pierna de cerdo': 0, 'solmillo de cerdo': 0, 'garbanzos': 2.64, 'frijoles negros': 2.44, 'frijoles colorados': 2.76, 'leche de vaca': 24.08, 'arroz': 1.14, 'codito': 1.26}
 productos = list(precios_prot.keys())
 
-barra_costo_promedio_nutr(productos, precios_carb, precios_gras, precios_prot )
+barra_costo_promedio_nutr(productos, precios_carb, precios_gras, precios_prot)
 
     
 
