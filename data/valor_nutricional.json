@@ -2,96 +2,95 @@
   
   "muslo de pollo": {
     "proteina": 20,
-    "calorias": 144,
+    "kilocalorías": 144,
     "carbohidratos": 0,
     "grasas": 8
   },
   "Pechuga de pollo": {
     "proteina": 23,
-    "calorias": 120,
+    "kilocalorías": 120,
     "carbohidratos": 0,
     "grasas": 3
   },
   "huevo": {
     "proteina": 6,
-    "calorias": 72,
+    "kilocalorías": 72,
     "carbohidratos": 0,
     "grasas": 5
   },
   "molleja de pollo": {
     "proteina": 18,
-    "calorias": 94,
+    "kilocalorías": 94,
     "carbohidratos": 0,
     "grasas": 2
   },
   "lomo de cerdo": {
     "proteina": 22,
-    "calorias": 132,
+    "kilocalorías": 132,
     "carbohidratos": 0,
     "grasas": 4
   },
   "atún": {
     "proteina": 17.5,
-    "calorias": 195,
+    "kilocalorías": 195,
     "carbohidratos": 0,
     "grasas": 13.89
   },
   "pierna de cerdo": {
     "proteina": 23,
-    "calorias": 232,
+    "kilocalorías": 232,
     "carbohidratos": 0,
     "grasas": 15
   },
   "solmillo de cerdo": {
     "proteina": 21,
-    "calorias": 109,
+    "kilocalorías": 109,
     "carbohidratos": 0,
     "grasas": 2
   },
   "garbanzos": {
     "proteina": 22,
-    "calorias": 364,
+    "kilocalorías": 364,
     "carbohidratos": 61,
     "grasas": 4.8
   },
   "frijoles negros": {
     "proteina": 22,
-    "calorias": 341,
+    "kilocalorías": 341,
     "carbohidratos": 59,
     "grasas": 1
   },
   "frijoles colorados": {
     "proteina": 22.5,
-    "calorias": 333,
+    "kilocalorías": 333,
     "carbohidratos": 61,
     "grasas": 1
   },
   "leche de vaca": {
     "proteina": 3,
-    "calorias": 63,
+    "kilocalorías": 63,
     "carbohidratos": 5,
     "grasas": 4
   },
   "arroz": {
     "proteina": 7,
-    "calorias": 316,
+    "kilocalorías": 316,
     "carbohidratos":67,
     "grasas": 2
   },
   "codito": {
     "proteina": 15,
-    "calorias": 395,
+    "kilocalorías": 395,
     "carbohidratos":77,
     "grasas": 2
   },
   "espaguetis": {
     "proteina": 13,
-    "kilokaloria": ,
+    "kilocalorías": 395,
     "carbohidratos":76,
     "grasas": 0.6
 
-    picadillo de pollo
-    higado de pollo
+    
   }
 
 }
