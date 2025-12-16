@@ -14,7 +14,7 @@ def proporcion_macronutrientes(
     plt.legend()
     plt.show()
 
-def barra_costo_promedio_nutr(productos,precios_carb, precios_gras, precios_prot):
+def barra_costo_promedio_macro(productos,precios_carb, precios_gras, precios_prot):
 
     cantidad_barras = len(productos)
     grosor_barras = 0.30
@@ -49,25 +49,14 @@ def barra_costo_promedio_nutr(productos,precios_carb, precios_gras, precios_prot
 
     plt.show()
 
+def barra_costo_promedio(productos, precio):
+    plt.barh(productos,precio, color="#1F74B1")
+    plt.title("Precio promedio de cada producto",fontweight='bold', fontsize=16)
+    plt.xlabel("Productos",fontweight='bold', fontsize=12)
+    plt.ylabel("Precio",fontweight='bold',  fontsize=12)
+    
+    plt.show()
 
-barra_costo_promedio_nutr(producto, carbohidrato, grasa, proteina)
-
-# def grafico_stacked_bar(productos, precios_carb, precios_gras, precios_prot):
-# # Data
-#     grupos = productos
-#     values1 = list(precios_prot.values())
-#     values2 = list(precios_gras.values())
-#     values3 = list(precios_carb.values())
-
-#     fig, ax = plt.subplots()
-
-#     # Stacked bar chart
-#     ax.bar(grupos, values1)
-#     ax.bar(grupos, values2, bottom = values1 )
-#     ax.bar(grupos, values3, bottom = values2 and bottom values3)
-
-#     plt.show() 
-# grafico_stacked_bar(listado_de_productos, proteina, grasa, carbohidrato)
 
 
 

@@ -144,7 +144,7 @@
         "productos":[ 
             {"nombre": "leche de vaca", "marca": "Vima", "cantidad": 1030, "unidad": "g", "precio": 1500},
             {"nombre": "garbanzos", "cantidad": 500, "unidad": "g", "precio": 950},
-            {"nombre": "atún", "cantidad": 453.592, "unidad": "g", "precio": 3280},
+            {"nombre": "atún", "cantidad": 98, "unidad": "g", "precio":600},
             {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio": 3300},
             {"nombre": "lomo de cerdo", "cantidad": 1000, "unidad": "g", "precio": 4400},
             {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 900},

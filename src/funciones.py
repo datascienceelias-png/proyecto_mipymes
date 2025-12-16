@@ -1,5 +1,5 @@
 import json
-
+productos = ['muslo de pollo', 'pechuga de pollo', 'higado de pollo', 'picadillo de pollo', 'huevo', 'molleja de pollo', 'lomo de cerdo', 'atún', 'pierna de cerdo', 'solmillo de cerdo', 'garbanzos', 'frijoles negros', 'frijoles colorados', 'leche de vaca', 'arroz', 'codito', 'espaguetis']
 
 def cargar_json(ruta_relativa):
     with open(ruta_relativa, "r" , encoding="utf-8") as archivo:
@@ -8,22 +8,27 @@ def cargar_json(ruta_relativa):
 mipyme = cargar_json("Data/mipymes.json")
 nutrientes = cargar_json("Data/valor_nutricional.json")
 
+def valor_nutricional(nutrientes):
+    """
+ Listas con valores nutricionales por producto
+    """
+   
+    proteina = []
+    grasas = []
+    carbohidratos = []
 
-# Listado de productos 
-lista = list(nutrientes.keys())
-listado_de_productos = [producto.lower() for producto in lista]
+    for producto in nutrientes:
+        proteina.append(nutrientes[producto]["proteina"])
+        grasas.append(nutrientes[producto]["grasas"])       
+        carbohidratos.append(nutrientes[producto]["carbohidratos"])
+        
+    return {
+        "proteina":proteina,
+        "grasas": grasas,
+        "carbohidrato": carbohidratos
+    }
 
-# Listas con valores nutricionales por producto
-proteinas_por_productos = []
-grasas_por_productos = []
-carbohidratos_por_productos = []
-
-for producto in nutrientes:
     
-    proteinas_por_productos.append(nutrientes[producto]["proteina"])
-    grasas_por_productos.append(nutrientes[producto]["grasas"])       
-    carbohidratos_por_productos.append(nutrientes[producto]["carbohidratos"]) 
-
 
 
 def promedio(lista):
@@ -37,14 +42,16 @@ def promedio(lista):
         return suma / len(lista)
     return 0
 
-def costo_promedio_nutr(data_mipyme, productos, proteina_por_100g):
+
+
+def costo_promedio_nutr(data_mipyme, productos, valor_nutricional):
     """
     Calcula el costo promedio de 1 g de proteína para cada producto,
     """
     output = {}
 
     for i, nombre_nutri in enumerate(productos):
-        lista_costos = [] #Esta lista es para calcular el promedio del costo, se reinicia los valores en cada iteracin
+        lista_costos = [] #Esta lista es para calcular el costo promedio, se reinicia los valores en cada iteracion
 
         for mipyme in data_mipyme["mipyme"]:
             for producto in mipyme["productos"]:
@@ -52,7 +59,7 @@ def costo_promedio_nutr(data_mipyme, productos, proteina_por_100g):
                 if producto["nombre"] == "huevo": # EL costo del huevo no es por 100 gramos sino por unidad
                     precio = float(producto["precio"])
                     gramos = float(producto["cantidad"])
-                    proteina_total = proteina_por_100g[i] * gramos
+                    proteina_total = valor_nutricional[i] * gramos
 
                     if proteina_total > 0: # Evitar división por cero cuando no hay carbohidratos en algunos alimentos
                         costo_por_gramo = precio / proteina_total
@@ -75,14 +82,6 @@ def costo_promedio_nutr(data_mipyme, productos, proteina_por_100g):
         output[nombre_nutri] = round(promedio(lista_costos), 2)
 
     return output
-proteina = costo_promedio_nutr(mipyme, listado_de_productos, proteinas_por_productos)
-grasa = costo_promedio_nutr(mipyme, listado_de_productos, grasas_por_productos)
-carbohidrato = costo_promedio_nutr(mipyme, listado_de_productos, carbohidratos_por_productos)
-
-
-print(proteina)
-print(grasa)
-print(carbohidrato)
 
 
 
@@ -99,4 +98,48 @@ def calcular_macronutrientes(kcal):
         "grasas_g": round(grasas, 2),
         "proteinas_g": round(proteinas, 2)
     }
+
+
+def precio_promedio_lb(listado_de_productos, mipyme):
+    """
+    Calcula el precio promedio de 1libra de cada  prodcutos,
+
+    El huevo se tiene en cuenta por un cartón de 30 unidades,
+
+    En caso de las latas de atún como su peso es menor a de una libra, el resultado seria el costo aproximado para comprar latas de atun hasta conseguir 1 libra de peso escurrido
+    """
+
+    output = {}
+    for producto in listado_de_productos:
+        lista_precio = [] 
+
+        for dic in mipyme["mipyme"]:
+            for products in (dic["productos"]):
+                #print(products)
+        
+                if producto == "huevo" and products["nombre"] == "huevo":
+                    
+                    lista_precio.append(float(products["precio"])) # El cartón de huevo siempre tiene 30 unidades
+
+                elif products["nombre"] == producto and producto!= "huevo":
+                    cantidad = products["nombre"] == producto
+                    lb = float(products["cantidad"]) / 453.592 #Convertir en float los datos necesrios porque python los reconoce como str
+                    precio_lb = float(products["precio"]) / lb
+                    lista_precio.append(precio_lb)
+                    
+        output[producto] = round(promedio(lista_precio), 2)                    
+                    
+        if producto == "leche de vaca":
+            # convertir el promedio por libra al promedio por envase de 1030 g
+            promedio_lb = promedio(lista_precio)
+            libras_envase = 1030 / 453.592
+            output[producto] = round(promedio_lb * libras_envase, 2)
+        else:
+            output[producto] = round(promedio(lista_precio), 2)
+
+    return output
+print(precio_promedio_lb(productos,mipyme))
+
+
+   
  
