@@ -49,14 +49,23 @@ def costo_promedio_nutr(data_mipyme, productos, proteina_por_100g):
         for mipyme in data_mipyme["mypyme"]:
             for producto in mipyme["products"]:
 
-                if producto["name"] == nombre_nutri:
-                    gramos = float(producto["quantity"]) # Convertir en float, de lo contrario da error porque se lee como string
+                if producto["name"] == "huevo": # EL costo del huevo no es por 100 gramos sino por unidad
                     price = float(producto["price"])
+                    gramos = float(producto["quantity"])
+                    proteina_total = proteina_por_100g[i] * gramos
+                    costo_por_unidad = price / proteina_total
+                    lista_costos.append(costo_por_unidad)
+                    continue
 
-                    proteina_total = (proteina_por_100g[i] / 100) * gramos
-                    if proteina_total > 0: # Evitar división por cero cuando no hay carbohidratos en algunos alimentos
-                        costo_por_gramo = price / proteina_total
-                        lista_costos.append(costo_por_gramo)
+                elif producto["name"] == nombre_nutri:
+                        gramos = float(producto["quantity"]) # Convertir en float, de lo contrario da error porque se lee como string
+                        price = float(producto["price"])
+
+                        proteina_total = (proteina_por_100g[i] / 100) * gramos
+
+                if proteina_total > 0: # Evitar división por cero cuando no hay carbohidratos en algunos alimentos
+                    costo_por_gramo = price / proteina_total
+                    lista_costos.append(costo_por_gramo)
 
         
             output[nombre_nutri] = round(promedio(lista_costos), 2)
@@ -66,23 +75,11 @@ proteina = costo_promedio_nutr(mipyme, listado_de_productos, proteinas_por_produ
 grasa = costo_promedio_nutr(mipyme, listado_de_productos, grasas_por_productos)
 carbohidrato = costo_promedio_nutr(mipyme, listado_de_productos, carbohidratos_por_productos)
 
+
 print(proteina)
 print(grasa)
 print(carbohidrato)
 
-def ordenar_costos(dic_costos, descendente=False):
-    """
-    Ordena un diccionario {producto: costo} por el valor del costo.
-    Devuelve una lista de tuplas (producto, costo) ordenada.
-    """
-    # Filtrar posibles valores None o 0 si no los quieres considerar
-    items_validos = [(prod, costo) for prod, costo in dic_costos.items()
-                     if costo is not None]
-
-    return sorted(items_validos, key=lambda x: x[1], reverse=descendente)
-#print(ordenar_costos(proteina))
-# print(ordenar_costos(grasa))
-# print(ordenar_costos(carbohidrato))
 
 
 def calcular_macronutrientes(kcal):
