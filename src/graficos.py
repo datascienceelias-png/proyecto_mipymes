@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from funciones import *
+
 
 def proporcion_macronutrientes(
     proporcion=[75, 15, 10],
@@ -14,9 +14,9 @@ def proporcion_macronutrientes(
     plt.legend()
     plt.show()
 
-def barra_costo_promedio_nutr(products,precios_carb, precios_gras, precios_prot):
+def barra_costo_promedio_nutr(productos,precios_carb, precios_gras, precios_prot):
 
-    cantidad_barras = len(products)
+    cantidad_barras = len(productos)
     grosor_barras = 0.30
 
     espacio_barra = list(range(cantidad_barras)) 
@@ -49,9 +49,8 @@ def barra_costo_promedio_nutr(products,precios_carb, precios_gras, precios_prot)
 
     plt.show()
 
-products = list(proteina.keys())
 
-#barra_costo_promedio_nutr(productos, precios_carb, precios_gras, precios_prot)
+barra_costo_promedio_nutr(producto, carbohidrato, grasa, proteina)
 
 # def grafico_stacked_bar(productos, precios_carb, precios_gras, precios_prot):
 # # Data
@@ -69,34 +68,8 @@ products = list(proteina.keys())
 
 #     plt.show() 
 # grafico_stacked_bar(listado_de_productos, proteina, grasa, carbohidrato)
-import matplotlib.pyplot as plt
 
-def sumar_listas(lista1, lista2):
-    # Suma elemento a elemento: [a1+b1, a2+b2, ...]
-    return [lista1[i] + lista2[i] for i in range(len(lista1))]
 
-def grafico_stacked_bar(productos, precios_carb, precios_gras, precios_prot):
-    grupos = productos
-    values1 = list(precios_prot.values())   # proteína
-    values2 = list(precios_gras.values())   # grasa
-    values3 = list(precios_carb.values())   # carbohidrato
-
-    # asegurar mismas longitudes
-    assert len(grupos) == len(values1) == len(values2) == len(values3)
-
-    fig, ax = plt.subplots()
-
-    ax.bar(grupos, values1, label="Proteínas")
-    ax.bar(grupos, values2, bottom=values1, label="Grasas")
-    ax.bar(grupos, values3, bottom=sumar_listas(values1, values2), label="Carbohidratos")
-
-    ax.legend()
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.show()
-
-# AQUÍ debes llamar a la función, no imprimirla
-grafico_stacked_bar(listado_de_productos, carbohidrato, grasa, proteina)
 
 
 

@@ -5,7 +5,7 @@ def cargar_json(ruta_relativa):
     with open(ruta_relativa, "r" , encoding="utf-8") as archivo:
         dato = json.load(archivo)
     return dato
-mipyme = cargar_json("Data/mypimes.json")
+mipyme = cargar_json("Data/mipymes.json")
 nutrientes = cargar_json("Data/valor_nutricional.json")
 
 
@@ -44,31 +44,35 @@ def costo_promedio_nutr(data_mipyme, productos, proteina_por_100g):
     output = {}
 
     for i, nombre_nutri in enumerate(productos):
-        lista_costos = []
+        lista_costos = [] #Esta lista es para calcular el promedio del costo, se reinicia los valores en cada iteracin
 
-        for mipyme in data_mipyme["mypyme"]:
-            for producto in mipyme["products"]:
+        for mipyme in data_mipyme["mipyme"]:
+            for producto in mipyme["productos"]:
 
-                if producto["name"] == "huevo": # EL costo del huevo no es por 100 gramos sino por unidad
-                    price = float(producto["price"])
-                    gramos = float(producto["quantity"])
+                if producto["nombre"] == "huevo": # EL costo del huevo no es por 100 gramos sino por unidad
+                    precio = float(producto["precio"])
+                    gramos = float(producto["cantidad"])
                     proteina_total = proteina_por_100g[i] * gramos
-                    costo_por_unidad = price / proteina_total
-                    lista_costos.append(costo_por_unidad)
-                    continue
 
-                elif producto["name"] == nombre_nutri:
-                        gramos = float(producto["quantity"]) # Convertir en float, de lo contrario da error porque se lee como string
-                        price = float(producto["price"])
+                    if proteina_total > 0: # Evitar división por cero cuando no hay carbohidratos en algunos alimentos
+                        costo_por_gramo = precio / proteina_total
+                        lista_costos.append(costo_por_gramo)
+                        costo_por_unidad = precio / proteina_total
+                        lista_costos.append(costo_por_unidad)
+                        continue
+
+                elif producto["nombre"] == nombre_nutri:
+                        gramos = float(producto["cantidad"]) # Convertir en float, de lo contrario da error porque se lee como string
+                        precio = float(producto["precio"])
 
                         proteina_total = (proteina_por_100g[i] / 100) * gramos
 
-                if proteina_total > 0: # Evitar división por cero cuando no hay carbohidratos en algunos alimentos
-                    costo_por_gramo = price / proteina_total
-                    lista_costos.append(costo_por_gramo)
+            if proteina_total > 0: # Evitar división por cero cuando no hay carbohidratos en algunos alimentos
+                costo_por_gramo = precio / proteina_total
+                lista_costos.append(costo_por_gramo)
 
         
-            output[nombre_nutri] = round(promedio(lista_costos), 2)
+        output[nombre_nutri] = round(promedio(lista_costos), 2)
 
     return output
 proteina = costo_promedio_nutr(mipyme, listado_de_productos, proteinas_por_productos)

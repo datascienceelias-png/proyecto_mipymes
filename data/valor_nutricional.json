@@ -12,6 +12,18 @@
     "carbohidratos": 0,
     "grasas": 3
   },
+  "higado de pollo": {
+    "proteina": 17,
+    "kilocalorías": 119,
+    "carbohidratos":1,
+    "grasas": 5
+  },
+  "picadillo de pollo": {
+    "proteina": 196,
+    "kilocalorías": 395,
+    "carbohidratos":15,
+    "grasas": 6
+  },
   "huevo": {
     "proteina": 6,
     "kilocalorías": 72,
@@ -88,10 +100,11 @@
     "proteina": 13,
     "kilocalorías": 395,
     "carbohidratos":76,
-    "grasas": 0.6
-
-    
+    "grasas": 2
   }
+ 
+  
+
 
 }
 
