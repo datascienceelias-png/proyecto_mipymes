@@ -57,6 +57,22 @@ def barra_costo_promedio(productos, precio):
     
     plt.show()
 
+def barra_apilada(producto, carbohidratos, proteínas, grasa):
+    x = producto      #Nombre de los productos
+    y1 = proteínas #valor 1proteina
+    y2 = grasa        #valor 2
+    y3 = carbohidratos    #valor 3
+    colores = ["#1F74B1", "#F38D30", "#CC243C"]
+
+
+    plt.bar(x, y1) #1era capa de la barra
+    plt.bar(x, y2, bottom=y1) #2da capa
+    #Sumar las 2 capas anteriores para formar la capa faltante
+    super_bottom = [p + g for p,g in zip(y1,y2)]
+    plt.bar(x, y3, bottom=super_bottom )
+
+    plt.show()
+
 
 
 
