@@ -385,7 +385,7 @@
           
              { "id": 22,
              "ubicación": "23.141883861552458, -82.39455567844196",
-        "nombre": "Café Turing",
+        "nombre": "Bodegón Turing",
         "dirección": "Calle F e/ calzada y 9",
          "productos":[ 
              {"nombre": "picadillo de pollo", "cantidad": 400 , "unidad": "g", "precio":440},
@@ -396,7 +396,9 @@
              {"nombre": "atún", "cantidad":98, "unidad": "g", "precio":550 },
              {"nombre": "frijoles negros", "cantidad":1000 , "unidad": "g", "precio": 780},
             {"nombre": "codito", "cantidad": 500 ,"unidad": "g", "precio":350 },
-             {"nombre": "garbanzos", "cantidad":453.592, "unidad": "g", "precio":750 }
+             {"nombre": "garbanzos", "cantidad":453.592, "unidad": "g", "precio":750 },
+             {"nombre": "pierna de cerdo", "cantidad":453.592, "unidad": "g", "precio":850}
+
             ]},
 
             { "id": 23,

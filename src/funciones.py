@@ -46,7 +46,7 @@ def costo_promedio_nutr(data_mipyme, productos, valor_nutricional):
         for mipyme in data_mipyme["mipyme"]:
             for producto in mipyme["productos"]:
 
-                if producto["nombre"] == "huevo": # EL costo del huevo no es por 100 gramos sino por unidad
+                if producto["nombre"] == "huevo": # EL costo del huevo no es por 100 gramos sino por unidad 
                     precio = float(producto["precio"])
                     gramos = float(producto["cantidad"])
                     macro_total = valor_nutricional[i] * gramos
@@ -92,6 +92,7 @@ def calcular_macronutrientes(kcal):
 
 
 def precio_promedio_lb(listado_de_productos, mipyme):
+
     """
     Calcula el precio promedio de 1 libra de cada  prodcutos,
 
@@ -138,5 +139,5 @@ def precio_promedio_lb(listado_de_productos, mipyme):
 
 
 
-   
+
  

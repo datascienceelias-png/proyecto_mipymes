@@ -57,8 +57,8 @@ def barra_costo_promedio(productos, precio):
     plt.figure(figsize=(10, 6))
     plt.barh(productos,precio, color="#1F74B1")
     plt.title("Precio promedio de cada producto",fontweight='bold', fontsize=16)
-    plt.xlabel("Productos",fontweight='bold', fontsize=12)
-    plt.ylabel("Precio",fontweight='bold',  fontsize=12)
+    plt.xlabel("Precios",fontweight='bold', fontsize=12)
+    plt.ylabel("Productos",fontweight='bold',  fontsize=12)
 
     
     
@@ -77,7 +77,7 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
     ax.bar(x, y1, color="#CC243C",label="Proteínas") 
 
      #2da capa
-    ax.bar(x, y2, bottom=y1, color="#F38D30", label="grasas")
+    ax.bar(x, y2, bottom=y1, color="#F38D30", label="Grasas")
 
     #3ra capa: Sumar las 2 capas anteriores para formar la capa faltante
     super_bottom = [p + g for p,g in zip(y1,y2)]
