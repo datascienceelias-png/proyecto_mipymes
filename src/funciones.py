@@ -71,7 +71,7 @@ def costo_promedio_nutr(data_mipyme, productos, valor_nutricional):
         output[nombre_nutri] = round(promedio(lista_costos), 2)
 
     return output
-print(costo_promedio_nutr(mipyme, productos, proteina))
+
 
 
 

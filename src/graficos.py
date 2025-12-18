@@ -8,10 +8,13 @@ def proporcion_macronutrientes(
 ):
     colores = ["#1F74B1", "#F38D30", "#CC243C"]
     explode = [0, 0, 0.1 ]
-
+    plt.figure(figsize=(12, 7))
     plt.pie(proporcion, labels=macronutrientes, autopct='%1.1f%%', startangle = 60, explode=explode, colors=colores)
     plt.title('Proporción de Macronutrientes', fontsize=16, fontweight='bold')
     plt.legend()
+
+   
+
     plt.show()
 
 def barra_costo_promedio_macro(productos,precios_carb, precios_gras, precios_prot):
@@ -26,6 +29,7 @@ def barra_costo_promedio_macro(productos,precios_carb, precios_gras, precios_pro
     x_grasa = [x for x in espacio_barra]
     x_proteina = [x+grosor_barras for x in espacio_barra]
 
+    fig, ax = plt.subplots(figsize=(10, 6))
     
     plt.figure(figsize=(30, 6))
 
@@ -50,10 +54,13 @@ def barra_costo_promedio_macro(productos,precios_carb, precios_gras, precios_pro
     plt.show()
 
 def barra_costo_promedio(productos, precio):
+    plt.figure(figsize=(10, 6))
     plt.barh(productos,precio, color="#1F74B1")
     plt.title("Precio promedio de cada producto",fontweight='bold', fontsize=16)
     plt.xlabel("Productos",fontweight='bold', fontsize=12)
     plt.ylabel("Precio",fontweight='bold',  fontsize=12)
+
+    
     
     plt.show()
 
@@ -64,14 +71,29 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
     y3 = carbohidratos    #valor 3
     colores = ["#1F74B1", "#F38D30", "#CC243C"]
 
+    
+    fig, ax = plt.subplots(figsize=(10, 6))
+    #1era capa de la barra
+    ax.bar(x, y1, color="#CC243C",label="Proteínas") 
 
-    plt.bar(x, y1) #1era capa de la barra
-    plt.bar(x, y2, bottom=y1) #2da capa
-    #Sumar las 2 capas anteriores para formar la capa faltante
+     #2da capa
+    ax.bar(x, y2, bottom=y1, color="#F38D30", label="grasas")
+
+    #3ra capa: Sumar las 2 capas anteriores para formar la capa faltante
     super_bottom = [p + g for p,g in zip(y1,y2)]
-    plt.bar(x, y3, bottom=super_bottom )
+    ax.bar(x, y3, bottom=super_bottom, color="#1F74B1", label="Carbohidratos")
+
+    plt.xticks(rotation=45, ha='right') #Rotacion
+    ax.legend(loc="upper right") #Leyenda
+    fig.tight_layout() 
+
+    #Titulos y Etiquetas:
+    ax.set_title("Precios promedio g/$ por macronutriente",fontweight='bold', fontsize=17)
+    ax.set_xlabel("Productos",fontweight='bold', fontsize=12)
+    ax.set_ylabel("Precios",fontweight='bold',  fontsize=12)
 
     plt.show()
+
 
 
 
