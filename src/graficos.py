@@ -59,9 +59,20 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
 
     plt.show()
 
+def evolucion_huevo(precio, fecha):
+    x = fecha
+    y = precio
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(x,y, marker = ".",linestyle='-', color = "b" )
+    plt.title("Evolución del precio del huevo", fontsize=14)
+    plt.xlabel("Fechas", fontsize=12)
+    plt.ylabel("Precios", fontsize=12)
+    plt.grid(True, alpha=0.3)
+    plt.show()
 
 
-
+    
 
 
 

@@ -96,7 +96,7 @@ def precio_promedio_lb(listado_de_productos, mipyme):
     """
     Calcula el precio promedio de 1 libra de cada  prodcutos,
 
-    El huevo se tiene en cuenta por un cartón de 30 unidades,
+    El valor del huevo se tiene en cuenta por una unidad,
 
     En caso de las latas de atún como su peso es menor a de una libra, el analisis seria para saber el precio promedio para comprar una lata de atun
 
@@ -112,8 +112,9 @@ def precio_promedio_lb(listado_de_productos, mipyme):
                 #print(products)
         
                 if producto == "huevo" and products["nombre"] == "huevo":
+                    precio_unidad = round((float(products["precio"]))/ 30) # El cartón de huevo siempre tiene 30 unidades
                     
-                    lista_precio.append(float(products["precio"])) # El cartón de huevo siempre tiene 30 unidades
+                    lista_precio.append(precio_unidad) 
 
                 elif producto == "atún" and products["nombre"] == "atún":  
                     lista_precio.append(float(products["precio"]))
@@ -139,5 +140,8 @@ def precio_promedio_lb(listado_de_productos, mipyme):
 
 
 
+
+    
+    
 
  
