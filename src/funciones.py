@@ -6,19 +6,6 @@ def cargar_json(ruta_relativa):
         dato = json.load(archivo)
     return dato
 
-mipyme = cargar_json("Data/mipymes.json")
-nutrientes = cargar_json("Data/valor_nutricional.json")
-
-proteina = []
-grasas = []
-carbohidratos = []
-
-for producto in nutrientes:
-    proteina.append(nutrientes[producto]["proteina"])
-    grasas.append(nutrientes[producto]["grasas"])       
-    carbohidratos.append(nutrientes[producto]["carbohidratos"])     
-
-
     
 
 def promedio(lista):
@@ -138,7 +125,28 @@ def precio_promedio_lb(listado_de_productos, mipyme):
 
     return output
 
+def datos_evolución_precios(precios):
 
+    fechas = []
+
+    for mes in precios.keys():
+        fechas.append(mes)
+
+    promedio_precio = []
+
+    for i in precios.values():
+        lista = []
+        if i["min"] is None:
+            costo = i["promedio"] * i["cantidad"]
+            promedio_precio.append(costo)
+            continue
+        else:
+            lista.append(i["min"])
+            lista.append(i["max"])
+            promedio = (round(sum(lista)/len(lista))) * i["cantidad"]
+    
+            promedio_precio.append(promedio)
+    return fechas, promedio_precio
 
 
     

@@ -2,6 +2,7 @@
   "2024-01": {
     "producto": "huevo",
     "unit": "unidad",
+    "cantidad": 30,
     "min": 73.33,
     "max": 120.0
   },
@@ -9,139 +10,162 @@
     "producto": "huevo",
     "unit": "unidad",
     "min": 80.0,
-    "max": 100.0
+    "max": 100.0,
+    "cantidad": 30
   },
   "2024-03": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 81.66,
-    "max": 100.0
+    "max": 100.0,
+    "cantidad": 30
   },
   "2024-04": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 85.0,
-    "max": 100.0
+    "max": 100.0,
+    "cantidad": 30
   },
   "2024-05": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 86.66,
-    "max": 130.0
+    "max": 130.0,
+    "cantidad": 30
   },
   "2024-06": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 76.66,
-    "max": 83.33
+    "max": 83.33,
+    "cantidad": 30
   },
   "2024-07": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 90.0,
-    "max": 120.0
+    "max": 120.0,
+    "cantidad": 30
   },
   "2024-08": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 76.67,
-    "max": 116.66
+    "max": 116.66,
+    "cantidad": 30
   },
   "2024-09": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 83.33,
-    "max": 130.0
+    "max": 130.0,
+    "cantidad": 30
   },
   "2024-10": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 80.0,
-    "max": 130.0
+    "max": 130.0,
+    "cantidad": 30
   },
   "2024-11": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 85.0,
-    "max": 120.0
+    "max": 120.0,
+    "cantidad": 30
   },
   "2024-12": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 90.0,
-    "max": 120.0
+    "max": 120.0,
+    "cantidad": 30
   },
   "2025-01": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 100.0,
-    "max": 120.0
+    "max": 120.0,
+    "cantidad": 30
   },
   "2025-02": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 86.66,
-    "max": 116.66
+    "max": 116.66,
+    "cantidad": 30
   },
   "2025-03": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 73.33,
-    "max": 100.0
+    "max": 100.0,
+    "cantidad": 30
   },
   "2025-04": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 66.66,
-    "max": 83.33
+    "max": 83.33,
+    "cantidad": 30
   },
   "2025-05": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 70.0,
-    "max": 100.0
+    "max": 100.0,
+    "cantidad": 30
   },
   "2025-06": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 90.0,
-    "max": 120.0
+    "max": 120.0,
+    "cantidad": 30
   },
   "2025-07": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 90.0,
-    "max": 120.0
+    "max": 120.0,
+    "cantidad": 30
   },
   "2025-08": {
     "producto": "huevo (unidad)",
     "unit": "unidad",
     "min": 86.66,
-    "max": 100.0
+    "max": 100.0,
+    "cantidad": 30
   },
   "2025-09": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 90.0,
-    "max": 120.0
+    "max": 120.0,
+    "cantidad": 30
   },
   "2025-10": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 83.33,
-    "max": 100.0
+    "max": 100.0,
+    "cantidad": 30
   },
   "2025-11": {
     "producto": "huevo",
     "unit": "unidad",
     "min": 90,
-    "max": 120
+    "max": 120,
+    "cantidad": 30
   },
   "2025-12": {
     "producto": "huevo",
     "unit": "unidad",
     "min": null,
-    "promedio": 104
+    "promedio": 104,
+    "cantidad": 30
   }
 
 }
