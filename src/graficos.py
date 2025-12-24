@@ -69,7 +69,7 @@ def evolución_huevo(precio, fecha):
 
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
-    plt.title("Evolución del precio del huevo", fontsize=16)
+    plt.title("Evolución del precio", fontsize=16)
     plt.xlabel("Fechas", fontsize=12)
     plt.ylabel("Precios", fontsize=12)
     plt.grid(True, alpha=0.3) #Activar las cuadrículas para mejor visualización

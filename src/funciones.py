@@ -125,28 +125,28 @@ def precio_promedio_lb(listado_de_productos, mipyme):
 
     return output
 
-def datos_evolución_precios(precios):
+def datos_evolución_precios(precios, producto):
 
     fechas = []
-
-    for mes in precios.keys():
+    promedio_precio = []
+    for mes in precios.keys(): #Iterar por cada mes 
         fechas.append(mes)
 
-    promedio_precio = []
 
-    for i in precios.values():
-        lista = []
-        if i["min"] is None:
-            costo = i["promedio"] * i["cantidad"]
-            promedio_precio.append(costo)
-            continue
-        else:
-            lista.append(i["min"])
-            lista.append(i["max"])
-            promedio = (round(sum(lista)/len(lista))) * i["cantidad"]
-    
+        if producto == "huevo" and producto in precios[mes]: #acceder al producto en ese mes
+            datos_producto = precios[mes][producto]
+            promedio = (round((datos_producto["min"] + datos_producto["max"]) / 2)) * 30
             promedio_precio.append(promedio)
+            continue
+        elif producto in precios[mes]:
+            datos_producto = precios[mes][producto]
+            promedio = round((datos_producto["min"] + datos_producto["max"]) / 2) # Calcular el promedio
+            promedio_precio.append(promedio)
+        
+        
+
     return fechas, promedio_precio
+
 
 
     
