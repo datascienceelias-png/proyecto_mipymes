@@ -7,7 +7,7 @@
     
       "productos": [ 
     {"nombre": "huevo", "cantidad": 30,"unidad": "unidad", "precio": 3000},
-    {"nombre": "muslo de pollo", "cantidad": 2467.96, "unidad": "g", "precio": 2200},   
+    {"nombre": "muslo de pollo", "cantidad":1727.57, "unidad": "g", "precio": 2200},   
     {"nombre": "lomo de cerdo", "cantidad": 453.592,"unidad": "g", "precio": 1000}, 
     {"nombre": "molleja de pollo", "cantidad": 1000, "unidad": "g", "precio": 1000}, 
     {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio": 1000},
@@ -27,7 +27,7 @@
          
     "productos": [ 
     {"nombre": "lomo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1300},
-    {"nombre": "muslo de pollo", "cantidad": 2467.96, "unidad": "g", "precio": 2200},
+    {"nombre": "muslo de pollo", "cantidad": 1727.57, "unidad": "g", "precio": 2200},
     {"nombre": "pierna de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1200},
     {"nombre": "pechuga de pollo", "cantidad": 2000, "unidad": "g", "precio": 5500},
     {"nombre": "solmillo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1300},
@@ -87,7 +87,7 @@
 
         "productos":[ 
             {"nombre": "carne de cerdo", "cantidad": 2000, "unidad": "g", "precio": 7850},
-            {"nombre": "muslo de pollo", "cantidad": 1000, "unidad": "g", "precio": 1250},
+            {"nombre": "muslo de pollo", "cantidad": 700, "unidad": "g", "precio": 1250},
             {"nombre": "leche de vaca", "marca": "Vima", "cantidad": 1030, "unidad": "g", "precio": 1300},
             {"nombre": "huevo", "cantidad": 30, "unidad": "unidad", "precio": 2790},
             {"nombre": "garbanzos", "cantidad": 500, "unidad": "g", "precio": 780},
@@ -105,7 +105,7 @@
       "dirección": "Línea y 12 ", 
 
         "productos":[ 
-            {"nombre": "muslo de pollo", "cantidad": 2000, "unidad": "g", "precio": 2450},
+            {"nombre": "muslo de pollo", "cantidad": 1400, "unidad": "g", "precio": 2450},
             {"nombre": "pechuga de pollo", "cantidad": 2000, "unidad": "g", "precio": 4800},
             {"nombre": "lomo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1200},
             {"nombre": "solmillo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1450},
@@ -129,7 +129,7 @@
             {"nombre": "frijoles negros", "cantidad": 453.592, "unidad": "g", "precio": 400},
             {"nombre": "pechuga de pollo", "cantidad": 453.592, "unidad": "g", "precio": 1800},
             {"nombre": "frijoles colorados", "cantidad": 453.592, "unidad": "g", "precio": 650},
-            {"nombre": "muslo de pollo", "cantidad": 4535.92, "unidad": "g", "precio": 4000},
+            {"nombre": "muslo de pollo", "cantidad": 3175.15, "unidad": "g", "precio": 4000},
             {"nombre": "leche de vaca", "cantidad": 1030, "unidad": "g", "precio": 1000},
             {"nombre": "picadillo de pollo", "cantidad": 400 , "unidad": "g", "precio":450},
             {"nombre": "codito", "cantidad": 500, "unidad":"g" , "precio": 400 },
@@ -206,7 +206,7 @@
              {"nombre": "frijoles negros", "cantidad": 1000, "unidad": "g", "precio":1433 },
             {"nombre": "arroz", "cantidad":820, "unidad": "g", "precio": 820},
               {"nombre": "codito", "cantidad":250, "unidad": "g", "precio": 500},
-              {"nombre": "muslo de pollo", "cantidad":1500, "unidad": "g", "precio":2000 }
+              {"nombre": "muslo de pollo", "cantidad":1050, "unidad": "g", "precio":2000 }
               
     
             ]},
@@ -271,7 +271,7 @@
              {"nombre": "lomo de cerdo", "cantidad": 453.592, "unidad":"g" , "precio": 1200 },
              {"nombre": "pechuga de pollo", "cantidad":2000 , "unidad": "g", "precio":4400},
              {"nombre": "picadillo de pollo", "cantidad":400 , "unidad": "g", "precio":440},
-             {"nombre": "muslo de pollo", "cantidad":453.592 , "unidad": "g", "precio":380},
+             {"nombre": "muslo de pollo", "cantidad":317.51 , "unidad": "g", "precio":380},
              {"nombre": "huevo", "cantidad": 30 , "unidad": "unidad", "precio":3000 },
              {"nombre": "frijoles negros", "cantidad": 1000, "unidad": "g", "precio":900 },
             {"nombre": "frijoles colorados", "cantidad": 453.592,"unidad": "g", "precio":810},
@@ -328,7 +328,7 @@
              {"nombre": "atún", "cantidad": 98 , "unidad": "g", "precio":500 },
               {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio": 1000},
             {"nombre": "frijoles negros", "cantidad": 500 ,"unidad": "g", "precio": 900},
-           {"nombre": "muslo de pollo", "cantidad": 2467.96, "unidad": "g", "precio": 3000},
+           {"nombre": "muslo de pollo", "cantidad": 1727.57, "unidad": "g", "precio": 3000},
              {"nombre": "garbanzos", "cantidad": 1000, "unidad": "g", "precio": 700}
             ]},
           
@@ -380,7 +380,7 @@
              {"nombre": "frijoles negros", "cantidad":1000, "unidad": "g", "precio": 1100},
             {"nombre": "leche de vaca", "cantidad":1030 ,"unidad": "g", "precio":1300},
             {"nombre": "higado de pollo", "cantidad":1000, "unidad": "g", "precio":970},
-             {"nombre": "muslo de pollo", "cantidad":453.592, "unidad": "g", "precio":450}
+             {"nombre": "muslo de pollo", "cantidad":317.51, "unidad": "g", "precio":450}
             ]},
           
              { "id": 22,

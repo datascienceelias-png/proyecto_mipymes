@@ -2,7 +2,7 @@
 Se analizaron 17 productos en 30 Mypimes en 3 municipios de La Habana
 
 En la base de datos del valor nutricional, se tomaron los datos a partir de las etiquetas de los productos y también por la aplicación [Fitia](https://fitia.app/es/). Estos valores presentan los macronutrientes de 100 gramos de cada producto en crudo, excepto el huevo que se obtuvo a partir de la unidad y la leche se covirtió de [litro a gramos](https://share.google/oaWMIUlMNlFlo1M0C). Además de que la leche en todas las mipymes se encuentran en un envase de caja de 1 litro.
-En el caso del atún, el producto es en lata y solo se consideró el peso escurrido. 
+En el caso del atún, el producto es en lata y solo se consideró el peso escurrido de igaul forma de paquete de pollo ya que contiene hueso
 
 Los datos de la evoluvión del precio del huvo se obtuvieron 
  desde enero del  2024 en la [ONEI](https://www.onei.gob.cu/publicaciones-economico?field_categoria_de_temas_target_id=495&field_year_value=2025&title=), pero en el mes de diciembre obtuve el dato a partir de los precios de las mipymes y el promedio de la  función "precio_promedio_lb"
